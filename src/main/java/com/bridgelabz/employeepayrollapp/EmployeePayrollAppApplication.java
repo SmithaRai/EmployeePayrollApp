@@ -2,10 +2,11 @@ package com.bridgelabz.employeepayrollapp;
 
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import static org.springframework.boot.SpringApplication.run;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class EmployeePayrollAppApplication {
 
     public static void main(String[] args) {
